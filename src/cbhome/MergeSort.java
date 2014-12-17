@@ -17,11 +17,9 @@ class MergeSort {
     public void sort(Integer[] list){
         
         System.out.println("-------------MERGE SORT-------------");
-        
         timer.reset();
         timer.start();
-        
-        
+
         Integer[] tempList = new Integer[list.length];
         mergeSort(list, tempList, 0, list.length-1);
         
@@ -32,17 +30,14 @@ class MergeSort {
     public void mergeSort(Integer[] list, Integer[] tempList , int start, int end){
         
         if(start<end){
-                                  
+          
             int middle = (start+end)/2;
-            
-            
             mergeSort(list , tempList , start , middle);
             mergeSort(list , tempList , middle+1 , end);
             merge(list , tempList , start , middle , end);
         }
         else return;
     }
-
     public void merge(Integer[] list, Integer[] tempList, int start, int middle, int end) {
    
         for(int i=start ; i<=end ; i++){
