@@ -13,7 +13,6 @@ package cbhome;
 class BubbleSort {
     
     protected NanoTimer timer = new NanoTimer();
-        
     public void sort(Integer[] list){
         
         timer.reset();
@@ -43,6 +42,7 @@ class BubbleSort {
             
             System.out.print(list[i]);
             if(i != numElements-1){
+ 
                 System.out.print(" , ");
             }            
         }
