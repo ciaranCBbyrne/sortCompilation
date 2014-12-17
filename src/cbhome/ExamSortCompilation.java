@@ -8,8 +8,6 @@ package cbhome;
 
 import java.util.Random;
 
-
-
 /**
  *
  * @author Administrator
@@ -22,8 +20,7 @@ public class ExamSortCompilation {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        
-      
+
         Integer[] list = new Integer[20];
         for(int i = 0 ; i<list.length ; i++){
             
@@ -31,34 +28,29 @@ public class ExamSortCompilation {
             int n = rand.nextInt(100);
             list[i] = n;
         }
-        
         System.out.println("Before Sort:");
         for(int i=0 ; i<list.length; i++){
             
             System.out.print(list[i]);
             if(i != list.length-1){
+
                 System.out.print(" , ");
             }
         }
         System.out.println();
         
         BubbleSort bubble = new BubbleSort();        
-        
-        
+
         OptiBubble optimised = new OptiBubble();
-        
-        
+
         InsertionSort insert = new InsertionSort();
-        
-        
+
         SelectionSort select = new SelectionSort();
-        
-        
+
         MergeSort merge = new MergeSort();
         merge.sort(list);
         
         QuickSort quick = new QuickSort();
         quick.sort(list);
     }
-    
 }
